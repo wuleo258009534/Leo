@@ -1,0 +1,257 @@
+{
+  "id": "cross-subject-demo",
+  "title": "跨学科课堂讲题示例",
+  "badge": "课堂讲评",
+  "topics": [
+    {
+      "id": "english",
+      "label": "英语 · 阅读",
+      "title": "从行为推断态度",
+      "summary": "找变化 → 找证据 → 作判断",
+      "materialLabel": "阅读原文",
+      "blocks": [
+        {
+          "id": "p1",
+          "label": "P1",
+          "type": "text",
+          "text": "Mia used to throw away paper after writing on only one side. One day, she visited a recycling centre with her class."
+        },
+        {
+          "id": "p2",
+          "label": "P2",
+          "type": "text",
+          "text": "After the visit, she put a box beside her desk for used paper. She now writes her shopping lists on the empty side. “Small changes can save resources,” she says."
+        }
+      ],
+      "questions": [
+        {
+          "id": "en-1",
+          "number": "1",
+          "prompt": "What can we learn about Mia?",
+          "answer": "B",
+          "status": "confirmed",
+          "evidence": [
+            "p1",
+            "p2"
+          ],
+          "approach": "比较参观前后的行为。",
+          "steps": [
+            {
+              "type": "text",
+              "text": "used to throw away 与 now writes 对比，说明她开始注意节约资源。"
+            }
+          ],
+          "pitfall": "不能把文章未提及的行为当作事实。",
+          "options": [
+            "A. She has stopped writing on paper.",
+            "B. She has become more careful about using paper.",
+            "C. She works at a recycling centre."
+          ]
+        },
+        {
+          "id": "en-2",
+          "number": "2",
+          "prompt": "What does “the empty side” refer to?",
+          "answer": "纸张没有写字的一面",
+          "status": "confirmed",
+          "evidence": [
+            "p2"
+          ],
+          "approach": "结合 used paper 与 one side 判断。",
+          "steps": [
+            {
+              "type": "text",
+              "text": "empty 在此指未写字，并非纸张为空白新纸。"
+            }
+          ],
+          "pitfall": ""
+        }
+      ]
+    },
+    {
+      "id": "math",
+      "label": "数学 · 方程",
+      "title": "方程求根与检验",
+      "summary": "识别结构 → 分解因式 → 检验",
+      "materialLabel": "题目与条件",
+      "blocks": [
+        {
+          "id": "m1",
+          "label": "第 1 题",
+          "type": "text",
+          "text": "解方程：x² − 5x + 6 = 0。"
+        },
+        {
+          "id": "m2",
+          "label": "第 2 题",
+          "type": "text",
+          "text": "解方程：√(x + 1) = x − 1。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "math-1",
+          "number": "1",
+          "prompt": "解 x² − 5x + 6 = 0。",
+          "answer": "x = 2 或 x = 3",
+          "status": "confirmed",
+          "evidence": [
+            "m1"
+          ],
+          "approach": "找出和为 5、积为 6 的两个数。",
+          "steps": [
+            {
+              "type": "text",
+              "text": "(x − 2)(x − 3) = 0。"
+            },
+            {
+              "type": "text",
+              "text": "所以 x = 2 或 x = 3。代回原式均成立。"
+            }
+          ],
+          "pitfall": "不要只保留一个根。"
+        },
+        {
+          "id": "math-2",
+          "number": "2",
+          "prompt": "解 √(x + 1) = x − 1。",
+          "answer": "x = 3",
+          "status": "confirmed",
+          "evidence": [
+            "m2"
+          ],
+          "approach": "先由等号左边非负，确定 x ≥ 1。",
+          "steps": [
+            {
+              "type": "text",
+              "text": "两边平方：x + 1 = (x − 1)²。"
+            },
+            {
+              "type": "text",
+              "text": "整理得 x(x − 3) = 0，候选解为 0、3。"
+            },
+            {
+              "type": "text",
+              "text": "0 不满足 x ≥ 1；代入 3：√4 = 2 = 3 − 1。故 x = 3。"
+            }
+          ],
+          "pitfall": "平方可能引入增根，必须回代检验。"
+        }
+      ]
+    },
+    {
+      "id": "physics",
+      "label": "物理 · 实验",
+      "title": "用实验数据求速度",
+      "summary": "读单位 → 求位移变化 → 计算速度",
+      "materialLabel": "实验条件与数据",
+      "blocks": [
+        {
+          "id": "condition",
+          "label": "实验条件",
+          "type": "text",
+          "text": "小车沿直线同向匀速运动，记录数据如下。"
+        },
+        {
+          "id": "table1",
+          "label": "数据表",
+          "type": "table",
+          "headers": [
+            "时间 t / s",
+            "位置 x / m"
+          ],
+          "rows": [
+            [
+              "0",
+              "0"
+            ],
+            [
+              "2",
+              "6"
+            ],
+            [
+              "4",
+              "12"
+            ]
+          ]
+        }
+      ],
+      "questions": [
+        {
+          "id": "phy-1",
+          "number": "1",
+          "prompt": "求小车在 0—4 s 内的速度。",
+          "answer": "3 m/s",
+          "status": "confirmed",
+          "evidence": [
+            "condition",
+            "table1"
+          ],
+          "approach": "用位移变化除以对应时间。",
+          "steps": [
+            {
+              "type": "text",
+              "text": "v = Δx / Δt = (12 − 0) / (4 − 0) = 3 m/s。"
+            }
+          ],
+          "pitfall": "注意是位置之差与时间之差，答案保留单位。"
+        },
+        {
+          "id": "phy-2",
+          "number": "2",
+          "prompt": "在相同运动状态下，第 6 s 的位置是多少？",
+          "answer": "18 m",
+          "status": "confirmed",
+          "evidence": [
+            "condition",
+            "table1"
+          ],
+          "approach": "先确认运动状态保持不变。",
+          "steps": [
+            {
+              "type": "text",
+              "text": "x = vt = 3 × 6 = 18 m。"
+            }
+          ],
+          "pitfall": "外推依赖于继续匀速运动这一条件。"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "label": "历史 · 材料",
+      "title": "从材料概括交通的作用",
+      "summary": "提取变化 → 分类概括 → 限定结论",
+      "materialLabel": "教学材料",
+      "blocks": [
+        {
+          "id": "h1",
+          "label": "自编教学材料（非史料原文）",
+          "type": "text",
+          "text": "某地区交通线开通后，货物运输所需时间缩短；沿线商人开始到更远的集市交易，部分本地产品销往外地。"
+        }
+      ],
+      "questions": [
+        {
+          "id": "hist-1",
+          "number": "1",
+          "prompt": "仅据材料，概括交通改善的两项作用。",
+          "answer": "缩短运输时间；扩大商品交易范围。",
+          "status": "confirmed",
+          "evidence": [
+            "h1"
+          ],
+          "approach": "分别提取时间变化和空间范围变化。",
+          "steps": [
+            {
+              "type": "text",
+              "text": "“所需时间缩短”对应运输效率；“更远的集市”“销往外地”对应交易范围。"
+            }
+          ],
+          "pitfall": "不能仅凭此材料断言居民收入普遍提高。",
+          "answerKind": "答案要点"
+        }
+      ]
+    }
+  ]
+}

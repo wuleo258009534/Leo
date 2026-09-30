@@ -1,0 +1,4 @@
+interface:
+  display_name: "全学科课堂讲题"
+  short_description: "将题目原文与详细解析制作成支持答案总览、证据定位及触屏操作的单页课堂课件"
+  default_prompt: "请使用 $classroom-question-deck，将我提供的题目原文和详细解析制作成便于课堂讲解的单页 HTML 课件。"
